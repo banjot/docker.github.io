@@ -14,17 +14,17 @@ supported version of Docker Engine.
 CS Docker Engine can be installed on the following operating systems:
 
 
-* [CentOS 7.1/7.2 & RHEL 7.0/7.1/7.2 (YUM-based systems)](install.md#install-on-centos-7172--rhel-707172-yum-based-systems)
-* [Ubuntu 14.04 LTS](install.md#install-on-ubuntu-1404-lts)
+* [CentOS 7.1/7.2 & RHEL 7.0/7.1/7.2/7.3 (YUM-based systems)](install.md#install-on-centos-7172--rhel-70717273-yum-based-systems)
+* [Ubuntu 14.04/16.04 LTS](install.md#install-on-ubuntu-1404-lts)
 * [SUSE Linux Enterprise 12](install.md#install-on-suse-linux-enterprise-123)
 
 
 ## Install on CentOS 7.1/7.2 & RHEL 7.0/7.1/7.2 (YUM-based systems)
 
-This section explains how to install on CentOS 7.1/7.2 & RHEL 7.0/7.1/7.2. Only
+This section explains how to install on CentOS 7.1/7.2/7.3 & RHEL 7.0/7.1/7.2/7.3. Only
 these versions are supported. CentOS 7.0 is **not** supported. On RHEL,
 depending on your current level of updates, you may need to reboot your server
-to update its RHEL kernel.
+after updating the kernel.
 
 1. Log into the system as a user with root or sudo permissions.
 
@@ -43,7 +43,7 @@ to update its RHEL kernel.
 4.  Add the Docker repository:
 
     ```bash
-    $ sudo yum-config-manager --add-repo https://packages.docker.com/1.12/yum/repo/main/centos/7
+    $ sudo yum-config-manager --add-repo https://packages.docker.com/1.13/yum/repo/main/centos/7
     ```
 
     This adds the repository of the latest version of CS Docker Engine. You can
@@ -81,7 +81,7 @@ to the `docker` group.
 
 10. Log out and log back in to have your new permissions take effect.
 
-## Install on Ubuntu 14.04 LTS
+## Install on Ubuntu 14.04/16.04 LTS
 
 1. Log into the system as a user with root or sudo permissions.
 
@@ -106,7 +106,7 @@ to the `docker` group.
 5.  Add the repository for the new version:
 
     ```bash
-    $ echo "deb https://packages.docker.com/1.12/apt/repo ubuntu-trusty main" | sudo tee /etc/apt/sources.list.d/docker.list
+    $ echo "deb https://packages.docker.com/1.13/apt/repo ubuntu-trusty main" | sudo tee /etc/apt/sources.list.d/docker.list
     ```
 
 6.  Run the following to install commercially supported Docker Engine and its
@@ -146,7 +146,7 @@ are available:
 3.  Add the Docker repository and public key:
 
     ```bash
-    $ sudo zypper ar -t YUM https://packages.docker.com/1.12/yum/repo/main/opensuse/12.3 docker-1.12
+    $ sudo zypper ar -t YUM https://packages.docker.com/1.12/yum/repo/main/opensuse/12.3 docker-1.13
     $ sudo rpm --import 'https://sks-keyservers.net/pks/lookup?op=get&search=0xee6d536cf7dc86e2d7d56f59a178ac6c6238f52e'
     ```
 
